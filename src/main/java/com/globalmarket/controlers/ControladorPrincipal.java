@@ -13,4 +13,10 @@ public class ControladorPrincipal {
         
     }
     
+    
+    @GetMapping("/login")
+     public String cargarIniciarSesion(){
+        return "login";
+        
+    }
 }
