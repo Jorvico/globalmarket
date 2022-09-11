@@ -1,1 +1,4 @@
+com\globalmarket\entities\Categoria.class
+com\globalmarket\entities\Producto.class
 com\globalmarket\GlobalmarketApplication.class
+com\globalmarket\controlers\ControladorPrincipal.class
