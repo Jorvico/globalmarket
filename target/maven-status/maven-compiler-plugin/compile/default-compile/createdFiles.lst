@@ -1,1 +1,6 @@
+com\globalmarket\entities\Categoria.class
+com\globalmarket\entities\Producto.class
+com\globalmarket\repositories\ICategoriaRepositorio.class
 com\globalmarket\GlobalmarketApplication.class
+com\globalmarket\controlers\ControladorPrincipal.class
+com\globalmarket\services\CategoriaServicio.class
