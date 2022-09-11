@@ -11,11 +11,12 @@ import javax.persistence.Id;
 public class Categoria {
     
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_categoria;
+    private int id;
     
-    @Column(name = "nombre_cate", nullable = false, length = 50, unique=true)
-    private String nombre_cate;
+    @Column(name = "nombre", nullable = false, length = 50, unique=true)
+    private String nombre;
     
     @Column(name = "estado_cate", columnDefinition = "TINYINT(1)")
     private boolean estado_cate;
@@ -23,29 +24,31 @@ public class Categoria {
     public Categoria() {
     }
 
-    public Categoria(String nombre_cate) {
-        this.nombre_cate = nombre_cate;
+    public Categoria(String nombre, boolean estado_cate) {
+        this.nombre = nombre;
+        this.estado_cate = estado_cate;
     }
 
-    public Categoria(int id_categoria, String nombre_cate) {
-        this.id_categoria = id_categoria;
-        this.nombre_cate = nombre_cate;
+    public Categoria(int id, String nombre, boolean estado_cate) {
+        this.id = id;
+        this.nombre = nombre;
+        this.estado_cate = estado_cate;
     }
 
-    public int getId_categoria() {
-        return id_categoria;
+    public int getId() {
+        return id;
     }
 
-    public void setId_categoria(int id_categoria) {
-        this.id_categoria = id_categoria;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre_cate() {
-        return nombre_cate;
+        return nombre;
     }
 
-    public void setNombre_cate(String nombre_cate) {
-        this.nombre_cate = nombre_cate;
+    public void setNombre_cate(String nombre) {
+        this.nombre = nombre;
     }
 
     public boolean isEstado_cate() {
@@ -56,6 +59,7 @@ public class Categoria {
         this.estado_cate = estado_cate;
     }
 
+    
    
     
 }
