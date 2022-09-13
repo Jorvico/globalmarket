@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ICategoriaRepositorio extends JpaRepository<Categoria, Integer>{
     
-   public List <Categoria> findByNombreContaining(String criterio);
+   public List <Categoria> findByNombreCategoriaContaining(String criterio);
     
 }

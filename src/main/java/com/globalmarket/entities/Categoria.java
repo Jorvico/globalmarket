@@ -11,55 +11,52 @@ import javax.persistence.Id;
 public class Categoria {
     
     @Id
-    @Column(name = "id")
+    @Column(name = "idCategoria")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idCategoria;
     
-    @Column(name = "nombre", nullable = false, length = 50, unique=true)
-    private String nombre;
+    @Column(name = "nombreCategoria", nullable = false, length = 50, unique=true)
+    private String nombreCategoria;
     
-    @Column(name = "estado_cate", columnDefinition = "TINYINT(1)")
-    private boolean estado_cate;
+    @Column(name = "estadoCategoria", columnDefinition = "TINYINT(1)")
+    private boolean estadoCategoria;
 
     public Categoria() {
     }
 
-    public Categoria(String nombre, boolean estado_cate) {
-        this.nombre = nombre;
-        this.estado_cate = estado_cate;
+    public Categoria(String nombreCategoria, boolean estadoCategoria) {
+        this.nombreCategoria = nombreCategoria;
+        this.estadoCategoria = estadoCategoria;
     }
 
-    public Categoria(int id, String nombre, boolean estado_cate) {
-        this.id = id;
-        this.nombre = nombre;
-        this.estado_cate = estado_cate;
+    public Categoria(int idCategoria, String nombreCategoria, boolean estadoCategoria) {
+        this.idCategoria = idCategoria;
+        this.nombreCategoria = nombreCategoria;
+        this.estadoCategoria = estadoCategoria;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombre_cate() {
-        return nombre;
-    }
-
-    public void setNombre_cate(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public boolean isEstado_cate() {
-        return estado_cate;
-    }
-
-    public void setEstado_cate(boolean estado_cate) {
-        this.estado_cate = estado_cate;
-    }
-
     
-   
-    
+    public int getIdCategoria() {
+        return idCategoria;
+    }
+
+    public void setIdCategoria(int idCategoria) {
+        this.idCategoria = idCategoria;
+    }
+
+    public String getNombreCategoria() {
+        return nombreCategoria;
+    }
+
+    public void setNombreCategoria(String nombreCategoria) {
+        this.nombreCategoria = nombreCategoria;
+    }
+
+    public boolean isEstadoCategoria() {
+        return estadoCategoria;
+    }
+
+    public void setEstadoCategoria(boolean estadoCategoria) {
+        this.estadoCategoria = estadoCategoria;
+    }
+
 }

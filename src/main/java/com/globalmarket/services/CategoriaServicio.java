@@ -19,7 +19,7 @@ public class CategoriaServicio {
     }
     
     public List<Categoria> consultarCategoria(String criterio){
-        List<Categoria> lista =repo.findByNombreContaining(criterio);
+        List<Categoria> lista =repo.findByNombreCategoriaContaining(criterio);
         return lista;
     }
     
@@ -40,7 +40,7 @@ public class CategoriaServicio {
     }
     
     public void eliminarCategoria(Categoria c){
-        repo.deleteById(c.getId());
+        repo.deleteById(c.getIdCategoria());
         
     }
     
