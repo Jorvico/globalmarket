@@ -16,10 +16,10 @@ class GlobalmarketApplicationTests {
     private CategoriaServicio servicio;
 
     @Test
-   
+   //@Disabled
 
     void probarCreacionNuevaCategoria() {
-        Categoria c = new Categoria("Aseo", true);
+        Categoria c = new Categoria("Tecnologia", true);
         Categoria guardado = servicio.crearNuevaCategoria(c);
         Assertions.assertTrue(guardado.getIdCategoria()> 0, "Error no se guardo la categoria");
     }
@@ -39,5 +39,13 @@ class GlobalmarketApplicationTests {
 
         Assertions.assertTrue(encontrado.getIdCategoria()== 5, "Error no se encontro la categoria con id 1");
     }
+        
+    @Test
+    
+    void probarSiEncuentroCategoria(){
+        List<Categoria> listado = servicio.consultarCategorias();
+        Assertions.assertTrue(listado.size() > 0 , "No se encontro ninguna categoria");
+    }
+    
 
 }
