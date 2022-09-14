@@ -6,19 +6,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "categorias")
+@Entity
+@Table(name = "categoria")
 public class Categoria {
     
     @Id
-    @Column(name = "idCategoria")
+   @Column(name = "idcategoria")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCategoria;
     
-    @Column(name = "nombreCategoria", nullable = false, length = 50, unique=true)
+    @Column(name = "nombrecategoria", nullable = false, length = 50, unique=true)
     private String nombreCategoria;
     
-    @Column(name = "estadoCategoria", columnDefinition = "TINYINT(1)")
+    @Column(name = "estadocategoria", columnDefinition = "TINYINT(1)")
     private boolean estadoCategoria;
 
     public Categoria() {
