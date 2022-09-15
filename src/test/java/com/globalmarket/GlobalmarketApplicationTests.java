@@ -16,7 +16,7 @@ class GlobalmarketApplicationTests {
     private CategoriaServicio servicio;
 
     @Test
-   //@Disabled
+   @Disabled
 
     void probarCreacionNuevaCategoria() {
         Categoria c = new Categoria("Tecnologia", true);
@@ -41,7 +41,7 @@ class GlobalmarketApplicationTests {
     }
         
     @Test
-    
+    @Disabled
     void probarSiEncuentroCategoria(){
         List<Categoria> listado = servicio.consultarCategorias();
         Assertions.assertTrue(listado.size() > 0 , "No se encontro ninguna categoria");
