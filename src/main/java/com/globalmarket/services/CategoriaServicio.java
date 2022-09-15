@@ -23,7 +23,7 @@ public class CategoriaServicio {
         return lista;
     }
     
-    public List<Categoria> consultarCategoria(){
+    public List<Categoria> consultarCategorias(){
         List<Categoria> lista = repo.findAll();
         return lista;
     }
