@@ -7,9 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     </head>
-    <body>
-
-
+    <body style="background-color: #eaede6">
 
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -65,57 +63,60 @@
                                     Inicio
                                 </a>
                             </li>
-                            <li>
-                                <a href="/categorias" class="nav-link text-white">
-                                    <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
-                                    Lista categorias
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/categorias/form" class="nav-link text-secondary">
+
+                            <li class="nav-item dropdown">
+                                <a href="/categorias/form" class="nav-link text-secondary dropdown-toggle" data-bs-toggle="dropdown">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#plus"/></svg>
-                                    Nueva categoria
+                                    Gestion de Categorias
                                 </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="/categorias">Lista categorias</a></li>
+                                    <li><a class="dropdown-item" href="/categorias/form">Nueva categoria</a></li>
+                                </ul>
                             </li>
-                            <li>
-                                <a href="#" class="nav-link text-white">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
-                                    Productos
+                                    Gestión de Productos
                                 </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="/categorias">menu 1</a></li>
+                                    <li><a class="dropdown-item" href="/categorias/form">menu 2</a></li>
+                                </ul>
                             </li>
                             <li>
-                                <a href="#" class="nav-link text-white">
+                                <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
                                     Customers
                                 </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="/categorias">menu 1</a></li>
+                                    <li><a class="dropdown-item" href="/categorias/form">menu 2</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="px-3 py-2 border-bottom mb-3">
-                <div class="container d-flex flex-wrap justify-content-center">
-                    <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-                        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                    </form>
 
-                    <div class="text-end">
-                        <button type="button" class="btn btn-light text-dark me-2">Login</button>
-                        <button type="button" class="btn btn-primary">Sign-up</button>
-                    </div>
-                </div>
+            <div class="px-3 py-3 border-bottom mb-3">
+
             </div>
+
         </header>
 
-        <div class="container">
-        <h3>Fortmulario categorias</h3>
+        <div class="b-example-divider"></div>
+    </main>
+
+    <div class="container">
+        <h3>Formulario categorias</h3>
         <form action="/categorias" th:object="${categoria}" method="post">
-            <div>
-                <label for="id">Id:</label>
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="id">Id:</label>
                 <input type="text"  th:field="*{idCategoria}" id="id" name="id" readonly>
             </div>
-            <div>   
-                <label for="categoria">Categoria:</label>
+            <div class="input-group mb-3">   
+                <label class="input-group-text" for="categoria">Categoria:</label>
                 <input type="text" th:field="*{nombreCategoria}" id="categoria" name="categoria" maxlength="30" required>
             </div>
             <div>
@@ -127,8 +128,8 @@
                 <button>Cancelar</button>
             </div>
         </form>
-        </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
 </html>
