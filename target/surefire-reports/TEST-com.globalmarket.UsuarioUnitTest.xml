@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.globalmarket.GlobalmarketApplicationTests" time="16.01" tests="4" errors="0" skipped="4" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.globalmarket.UsuarioUnitTest" time="0.921" tests="3" errors="0" skipped="1" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -61,56 +61,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="probarSiExisteUnaCategoriaId1" classname="com.globalmarket.GlobalmarketApplicationTests" time="0">
-    <skipped message="void com.globalmarket.GlobalmarketApplicationTests.probarSiExisteUnaCategoriaId1() is @Disabled"/>
-    <system-out><![CDATA[23:50:53.654 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-23:50:53.673 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-23:50:53.747 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.globalmarket.GlobalmarketApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-23:50:53.782 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.globalmarket.GlobalmarketApplicationTests], using SpringBootContextLoader
-23:50:53.792 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.globalmarket.GlobalmarketApplicationTests]: class path resource [com/globalmarket/GlobalmarketApplicationTests-context.xml] does not exist
-23:50:53.793 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.globalmarket.GlobalmarketApplicationTests]: class path resource [com/globalmarket/GlobalmarketApplicationTestsContext.groovy] does not exist
-23:50:53.794 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.globalmarket.GlobalmarketApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-23:50:53.795 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.globalmarket.GlobalmarketApplicationTests]: GlobalmarketApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:50:53.921 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.globalmarket.GlobalmarketApplicationTests]
-23:50:54.071 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\Users\Documents\ProyectoCiclo3\globalmarket\target\classes\com\globalmarket\GlobalmarketApplication.class]
-23:50:54.074 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.globalmarket.GlobalmarketApplication for test class com.globalmarket.GlobalmarketApplicationTests
-23:50:54.324 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.globalmarket.GlobalmarketApplicationTests]: using defaults.
-23:50:54.326 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-23:50:54.365 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@793138bd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1951b871, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5c18016b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@33aeca0b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@43aaf813, org.springframework.test.context.support.DirtiesContextTestExecutionListener@57ac5227, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4ba302e0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@e98770d, org.springframework.test.context.event.EventPublishingTestExecutionListener@1ae67cad, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2f6e28bc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7c098bb3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@31e4bb20, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@18cebaa5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@463b4ac8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@765f05af]
-23:50:54.372 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@774698ab testClass = GlobalmarketApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@55342f40 testClass = GlobalmarketApplicationTests, locations = '{}', classes = '{class com.globalmarket.GlobalmarketApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5f77d0f9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@42b3b079, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@12299890, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@24c4ddae, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@404bbcbd, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@31c88ec8], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v2.7.3)
-
-2022-09-15 23:50:55.547  INFO 10044 --- [           main] c.g.GlobalmarketApplicationTests         : Starting GlobalmarketApplicationTests using Java 11.0.16 on DESKTOP-30BBKNG with PID 10044 (started by jlvid in D:\Users\Documents\ProyectoCiclo3\globalmarket)
-2022-09-15 23:50:55.550  INFO 10044 --- [           main] c.g.GlobalmarketApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2022-09-15 23:50:57.992  INFO 10044 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-15 23:50:58.157  INFO 10044 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 4 JPA repository interfaces.
-2022-09-15 23:51:00.775  INFO 10044 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-15 23:51:00.978  INFO 10044 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-15 23:51:01.825  INFO 10044 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-15 23:51:02.619  INFO 10044 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-15 23:51:03.790  INFO 10044 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-15 23:51:03.818  INFO 10044 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-09-15 23:51:05.824  INFO 10044 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-15 23:51:05.844  INFO 10044 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-15 23:51:07.856  WARN 10044 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-15 23:51:08.649  INFO 10044 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-09-15 23:51:09.461  INFO 10044 --- [           main] c.g.GlobalmarketApplicationTests         : Started GlobalmarketApplicationTests in 14.912 seconds (JVM running for 18.321)
-]]></system-out>
-  </testcase>
-  <testcase name="probarCreacionNuevaCategoria" classname="com.globalmarket.GlobalmarketApplicationTests" time="0">
-    <skipped message="void com.globalmarket.GlobalmarketApplicationTests.probarCreacionNuevaCategoria() is @Disabled"/>
-  </testcase>
-  <testcase name="probarSiExisteUnaCategoriaAseo" classname="com.globalmarket.GlobalmarketApplicationTests" time="0">
-    <skipped message="void com.globalmarket.GlobalmarketApplicationTests.probarSiExisteUnaCategoriaAseo() is @Disabled"/>
-  </testcase>
-  <testcase name="probarSiEncuentroCategoria" classname="com.globalmarket.GlobalmarketApplicationTests" time="0">
-    <skipped message="void com.globalmarket.GlobalmarketApplicationTests.probarSiEncuentroCategoria() is @Disabled"/>
+  <testcase name="comprobarSiBuscaUsuarioPorRol" classname="com.globalmarket.UsuarioUnitTest" time="0.832"/>
+  <testcase name="comprobarSiBuscaUsuario" classname="com.globalmarket.UsuarioUnitTest" time="0.073"/>
+  <testcase name="comprobarSiGuardaUsuario" classname="com.globalmarket.UsuarioUnitTest" time="0">
+    <skipped message="public void com.globalmarket.UsuarioUnitTest.comprobarSiGuardaUsuario() is @Disabled"/>
   </testcase>
 </testsuite>

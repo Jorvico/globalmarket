@@ -10,5 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface ICategoriaRepositorio extends JpaRepository<Categoria, Integer>{
     
    public List <Categoria> findByNombreCategoriaContaining(String criterio);
+   public List <Categoria> findByEstadoCategoriaTrue();
     
 }

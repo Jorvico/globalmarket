@@ -2,7 +2,7 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Formulario Roles</title>
+        <title>Formulario categorias</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -80,7 +80,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link text-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
                                     Gestión de Roles
                                 </a>
@@ -91,7 +91,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown">
+                                <a href="#" class="nav-link text-secondary dropdown-toggle" data-bs-toggle="dropdown">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
                                     Gestión de Usuarios
                                 </a>
@@ -125,20 +125,46 @@
         <div class="b-example-divider"></div>
     </main>
 
-    <div class="container">
-        <h3>Formulario Roles</h3>
-        <form action="/roles" th:object="${rol}" method="post">
+    <div class="container border border-secondary rounded">
+        <h3>Formulario Usuarios</h3>
+
+        <form action="/usuarios" th:object="${usuario}" method="post">
+
             <div class="input-group mb-3">
                 <label class="input-group-text" for="id">Id:</label>
-                <input type="text"  th:field="*{idRol}" id="id" name="id" readonly>
+                <input type="text"  th:field="*{idUsuario}" id="id" name="id" readonly> 
             </div>
             <div class="input-group mb-3">   
-                <label class="input-group-text" for="rol">Rol:</label>
-                <input type="text" th:field="*{nombreRol}" id="categoria" name="rol" maxlength="30" required>
+                <label class="input-group-text" for="documento">Numero de documento:</label>
+                <input type="number" th:field="*{documentoUsuario}" id="categoria" name="documento" maxlength="30" required>
+            </div>
+            <div class="input-group mb-3">   
+                <label class="input-group-text" for="usuario">Nombre:</label>
+                <input type="text" th:field="*{nombreUsuario}" id="categoria" name="usuario" maxlength="30" required>
+            </div>
+            <div class="input-group mb-3">   
+                <label class="input-group-text" for="contrasena">Contraseña:</label>
+                <input type="password" th:field="*{contrasenaUsuario}" id="categoria" name="contrasena" maxlength="30" required>
             </div>
             <div>
-                <input type="submit" value="Guardar">
-                <button>Cancelar</button>
+                <label for="estado">Estado:</label>
+                <input type="checkbox" th:field="*{estadoUsuario}" id="estado" name="estado">
+            </div>
+
+            <div>
+                <label for="rol" class="form-control-sm">Rol:</label>
+                <select th:field="*{rol}" id="rol" name="rol" class="form-select form-select-sm" required>
+                    <option th:value=null th:text="'Seleccione una opcion'">Volvo</option>
+                    <option th:each="rol : ${roles}" th:value="${rol.idRol}" th:text="${rol.nombreRol}"></option>
+
+                </select>
+
+
+            </div>
+
+            <div>
+                <input class="btn btn-success" type="submit" value="Guardar">
+                <a href="/usuarios" class="btn btn-danger" role="button">Cancelar</a>
             </div>
         </form>
     </div>
