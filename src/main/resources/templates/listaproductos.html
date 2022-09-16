@@ -91,7 +91,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="nav-link text-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
                                     Gestión de Usuarios
                                 </a>
@@ -102,7 +102,7 @@
                             </li>
                             
                             <li>
-                                <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown">
+                                <a href="#" class="nav-link text-secondary dropdown-toggle" data-bs-toggle="dropdown">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#scan"/></svg>
                                     Gestión de Productos
                                 </a>
@@ -127,22 +127,24 @@
 
 
     <div class="container">
-        <h3>Lista Usuarios</h3>    
-        <form action="/usuarios" method="get">
+        <h3>Lista Productos</h3>    
+        <form action="/productos" method="get">
             <label for="criterio">Buscar:</label>
             <input type="text" th:value="${criterio}" id="criterio" name="criterio">
-            <input type="submit" value="Buscar Usuario">
+            <input type="submit" value="Buscar Producto">
 
         </form>
         <table class="table table-striped table-hover ">
             <thead>
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Documento</th>    
-                    <th scope="col">Nombre</th>  
-                    <th scope="col">Contraseña</th>
-                    <th scope="col">Habilitado</th>
-                    <th scope="col">Rol</th>
+                    <th scope="col">Nombre</th>    
+                    <th scope="col">Marca</th>  
+                    <th scope="col">Presentacion</th>
+                    <th scope="col">Costo</th>
+                    <th scope="col">Precio de venta</th>
+                    <th scope="col">Inventario actual</th>
+                    <th scope="col">Categoria</th>
                     <th scope="col">Acciones</th>
                     
                 </tr>
@@ -150,21 +152,23 @@
 
             <tbody>
 
-                <tr th:if="${not #lists.isEmpty(usuarios)}" th:each="usuario : ${usuarios}">
-                    <td scope="row" th:text= "${usuario.idUsuario}">...</td>
-                    <td scope="row" th:text= "${usuario.documentoUsuario}">...</td>
-                    <td scope="row" th:text= "${usuario.nombreUsuario}">...</td>
-                    <td scope="row" th:text= "${usuario.contrasenaUsuario}">...</td>
-                    <td scope="row" th:text= "${usuario.estadoUsuario}">...</td>
-                    <td scope="row" th:text= "${usuario.Rol.nombreRol}">...</td>
+                <tr th:if="${not #lists.isEmpty(productos)}" th:each="producto : ${productos}">
+                    <td scope="row" th:text= "${producto.idProducto}">...</td>
+                    <td scope="row" th:text= "${producto.nombreProducto}">...</td>
+                    <td scope="row" th:text= "${producto.marcaProducto}">...</td>
+                    <td scope="row" th:text= "${producto.presentacionProducto}">...</td>
+                    <td scope="row" th:text= "${producto.costoProducto}">...</td>
+                    <td scope="row" th:text= "${producto.precioVentaProducto}">...</td>
+                    <td scope="row" th:text= "${producto.inventarioActualProducto}">...</td>
+                    <td scope="row" th:text= "${producto.Categoria.nombreCategoria}">...</td>
 
                     <td>
-                        <a th:href="${'/usuarios/form/' + usuario.idUsuario}">Editar</a>
-                        <a th:href="${'/usuarios/eliminar/' + usuario.idUsuario}">Eliminar</a>
+                        <a th:href="${'/productos/form/' + producto.idProducto}">Editar</a>
+                        <a th:href="${'/productos/eliminar/' + producto.idProducto}">Eliminar</a>
                     </td>
 
                 </tr>
-                <tr th:if="${#lists.isEmpty(usuarios)}">
+                <tr th:if="${#lists.isEmpty(productos)}">
                     <td colspan="7">No se encontraron usuarios</td>
 
 

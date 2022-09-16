@@ -23,6 +23,11 @@ public class CategoriaServicio {
         return lista;
     }
     
+    public List<Categoria> consultarCategoriaHab(){
+        List<Categoria> lista =repo.findByEstadoCategoriaTrue();
+        return lista;
+    }
+    
     public List<Categoria> consultarCategorias(){
         List<Categoria> lista = repo.findAll();
         return lista;

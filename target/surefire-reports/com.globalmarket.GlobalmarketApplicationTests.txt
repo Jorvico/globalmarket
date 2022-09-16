@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.globalmarket.GlobalmarketApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 11.843 s - in com.globalmarket.GlobalmarketApplicationTests
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 16.01 s - in com.globalmarket.GlobalmarketApplicationTests
