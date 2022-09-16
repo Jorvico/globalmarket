@@ -65,7 +65,7 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a href="/categorias/form" class="nav-link text-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                <a href="/categorias/form" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#plus"/></svg>
                                     Gestion de Categorias
                                 </a>
@@ -75,23 +75,24 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown">
+                                <a href="#" class="nav-link text-secondary dropdown-toggle" data-bs-toggle="dropdown">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
-                                    Gestión de Productos
+                                    Gestión de Roles
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="/categorias">menu 1</a></li>
-                                    <li><a class="dropdown-item" href="/categorias/form">menu 2</a></li>
+                                    <li><a class="dropdown-item" href="/roles">Lista Roles</a></li>
+                                    <li><a class="dropdown-item" href="/roles/form">Nuevo Rol</a></li>
                                 </ul>
                             </li>
+                           
                             <li>
                                 <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
-                                    Customers
+                                    Gestión de Usuarios
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="/categorias">menu 1</a></li>
-                                    <li><a class="dropdown-item" href="/categorias/form">menu 2</a></li>
+                                    <li><a class="dropdown-item" href="/usuarios">Lista Usuarios</a></li>
+                                    <li><a class="dropdown-item" href="/usuarios/form">Nuevo Usuario</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -108,7 +109,7 @@
         <div class="b-example-divider"></div>
     </main>
 
-    <div class="container">
+    <div class="container border border-secondary rounded">
         <h3>Formulario categorias</h3>
         <form action="/categorias" th:object="${categoria}" method="post">
             <div class="input-group mb-3">
