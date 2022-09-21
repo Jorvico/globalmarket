@@ -33,6 +33,7 @@ public class ControladorUsuario {
         }else{
             model.addAttribute("usuarios", usuario.consultarUsuarios(criterio));       
         }
+
         return "listausuarios";
     }
 
